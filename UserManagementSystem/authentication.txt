@@ -1,0 +1,11 @@
+API authentication user and password: 
+
+Please note that i didn't use static values for username and password which i've stored them in the main DB,
+
+Authentication Username: alaa
+Authentication Password: 123
+
+==========================================
+
+Database is exported and uploaded to main project folder. 
+
