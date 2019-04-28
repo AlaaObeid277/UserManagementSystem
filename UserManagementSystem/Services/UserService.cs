@@ -15,10 +15,7 @@ namespace UserManagementSystem.Services
             var client = new MongoClient(config.GetConnectionString("UsersDb"));
             var database = client.GetDatabase("UsersDb");
             Users = database.GetCollection<User>("Users");
-            //for Auth
-            var UserCredentialsClient = new MongoClient(config.GetConnectionString("UserCredentialsDb"));
-            var UserCredentialsDatabase = UserCredentialsClient.GetDatabase("UserCredentialsDb");
-            userCredentials = UserCredentialsDatabase.GetCollection<UserCredentials>("UserCredentials");
+            userCredentials = database.GetCollection<UserCredentials>("UserCredentials");
         }
         public bool UserAuthentication(UserCredentials userCredentialsParam)
         {
